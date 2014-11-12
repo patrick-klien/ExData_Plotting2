@@ -9,5 +9,6 @@ plot1 <- function(){
   ## Sum up all emissions by year and save into a second variable
   year_sum <- aggregate(data$Emissions, by = list(data$year), FUN = sum)
   
-  with(year_sum, plot(Group.1, x, type = "b", ylab = expression(PM[2.5]), lwd = 4, xlab = "Years", main = expression("Total emissions of PM"[2.5])))
+  with(year_sum, plot(Group.1, x, type = "b", ylab = expression(PM[2.5]), lwd = 4, main = expression("Total emissions: PM"[2.5])))
+  ## axis(1, at = c(1998,2002,2005,2008)),
 }
